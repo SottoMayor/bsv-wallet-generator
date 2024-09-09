@@ -1,3 +1,5 @@
+import { WalletString } from "../shared/types";
+
 export default class WalletFileWriter {  
     constructor(private filePath: string) {}
 
@@ -6,5 +8,12 @@ export default class WalletFileWriter {
       const pk = 'public key'.padEnd(66, ' ');
       const address = 'address'.padEnd(35, ' ');
       return `${sk} ${pk} ${address}`;
-    }  
+    }
+ 
+    private createRecord(record: WalletString): string {
+      const sk = record.sk.padEnd(80, ' '); // sk -> 80 characters
+      const pk = record.pk.padEnd(66, ' '); // pk -> 66 characters
+      const address = record.address.padEnd(35, ' '); // address -> 35 characters
+      return `${sk} ${pk} ${address}`;
+    }
 }
