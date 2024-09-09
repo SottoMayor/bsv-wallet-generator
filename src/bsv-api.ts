@@ -8,8 +8,17 @@ export default class BsvApi {
         return bsv.Networks.get(this.env);
     }
 
-    public randomSecretKey(): string {
-        const privKey = bsv.PrivateKey.fromRandom(this.network()).toString();
+    public randomSecretKey(): bsv.PrivateKey {
+        const privKey = bsv.PrivateKey.fromRandom(this.network());
+
         return privKey;
+    }
+
+    public randomWallet(): { sk: bsv.PrivateKey, pk: bsv.PublicKey, address: bsv.Address } {
+        const sk =  this.randomSecretKey();
+        const pk = sk.toPublicKey();
+        const address = sk.toAddress();
+
+        return {sk, pk, address};
     }
 }

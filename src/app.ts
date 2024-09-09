@@ -5,4 +5,4 @@ dotenv.config();
 const NETWORK = process.env.NETWORK! as EnvType;
 const bsvApi = new BsvApi(NETWORK);
 
-console.log(bsvApi.randomSecretKey());
+console.log(bsvApi.randomWallet());
