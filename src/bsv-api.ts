@@ -1,5 +1,5 @@
 import { bsv, Network } from 'scrypt-ts';
-import { EnvType } from './shared/types';
+import { EnvType, RandomWallet } from './shared/types';
 
 export default class BsvApi {
     constructor(readonly env: EnvType = 'testnet') {}
@@ -14,7 +14,7 @@ export default class BsvApi {
         return privKey;
     }
 
-    public randomWallet(): { sk: bsv.PrivateKey, pk: bsv.PublicKey, address: bsv.Address } {
+    public randomWallet(): RandomWallet {
         const sk =  this.randomSecretKey();
         const pk = sk.toPublicKey();
         const address = sk.toAddress();
