@@ -33,6 +33,9 @@ Para rodar o sistema, é necessário a instalação das ferramentas:
    npm start
    ```
 
+## Output
+O resultado final da execução do script é a geração de uma carteira aleatória, contendo 5 pares de chave, em um arquivo posicional nomeado `wallet.txt`. Nesse arquivo estão informações sobre a chave privada (sk), a chave pública (pk) e o endereço (address).
+
 
 
    
