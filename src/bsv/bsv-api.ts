@@ -1,5 +1,5 @@
 import { bsv, Network } from 'scrypt-ts';
-import { EnvType, Wallet } from '../src/shared/types';
+import { EnvType, Wallet } from '../shared/types';
 import WalletExec from './wallet-exec';
 
 export default class BsvApi {
