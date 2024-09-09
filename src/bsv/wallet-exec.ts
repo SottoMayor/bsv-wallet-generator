@@ -8,7 +8,10 @@ export default class WalletExec {
         public address: bsv.Address
     ) {}
 
-    public serialize(format: string): Wallet | WalletString {
+    serialize(format: 'string'): WalletString; 
+    serialize(): Wallet; 
+
+    public serialize(format?: string): Wallet | WalletString {
         if (format === 'string') {
             return {
                 sk: this.sk.bn.toString(),
