@@ -9,7 +9,7 @@ const bsvApi = new BsvApi(NETWORK);
 
 // Generating the random wallet
 const randomWallet: Array<WalletString> = [];
-for(let counter = 0; counter < 4; counter++) {
+for(let counter = 0; counter < 5; counter++) {
     const newWallet = bsvApi.randomWallet().serialize('string');
     randomWallet.push(newWallet);
 }
