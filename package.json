@@ -15,5 +15,8 @@
     "@types/node": "^22.5.4",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "scrypt-ts": "^1.4.0"
   }
 }
